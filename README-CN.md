@@ -1,7 +1,7 @@
 <img src="./example/screenshot/StaringChat.png" />
 
 <div align="center">
-  <a href="https://chat.staringos.com/?f=mbrm">免费使用</a> | <a href="https://staringos.com?f=mbrm">官网</a> ｜ <a href="https://github.com/staringos">Github</a>
+  <a href="https://chat.staringos.com/?f=mbrm">免费使用</a> | <a href="https://staringos.com?f=mbrm">官网</a> ｜ <a href="https://github.com/staringos">Github</a> | <a href="https://staringos.feishu.cn/wiki/OVBOw76u8iBOIGk8KW6cOV1fnVh">Document</a>
 </div>
 <br />
 <div align="center">
