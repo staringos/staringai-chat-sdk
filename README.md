@@ -1,7 +1,7 @@
 <img src="./example/screenshot/StaringChat-EN.png" />
 
 <div align="center">
-  <a href="https://chat.staringos.com/?f=mbrm">Use for free</a> | <a href="https://staringos.com?f=mbrm">Website</a> ｜ <a href="https://github.com/staringos">Github</a>
+  <a href="https://chat.staringos.com/?f=mbrm">Use for free</a> | <a href="https://staringos.com?f=mbrm">Website</a> | <a href="https://github.com/staringos">Github</a> | <a href="https://staringos.feishu.cn/wiki/OVBOw76u8iBOIGk8KW6cOV1fnVh">Document</a>
 </div>
 <br />
 <div align="center">
