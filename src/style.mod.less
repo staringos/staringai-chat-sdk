@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   transition: all 250ms ease-out;
-  opacity: 0.6;
+  overflow: hidden;
 
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -53,6 +53,10 @@
       opacity: 0;
       width: 35%;
     }
+  }
+
+  .customized {
+    width: 100% !important;
   }
 
   &.close {

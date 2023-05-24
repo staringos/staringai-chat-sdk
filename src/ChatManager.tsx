@@ -1,15 +1,19 @@
 import h from './utils/runtime';
 
 import styles from './style.mod.less';
-import { BubbleButtonId } from './utils/constants';
+import {
+  BubbleButtonId,
+  DefaultBubbleButtonBackgroundImage,
+} from './utils/constants';
 import ChatHolder from './ChatHolder';
+import { ChatOptions } from './utils/type';
 
 class ChatManager {
   private bubbleButton?: HTMLElement;
   private currentState = false;
   private onStateChangeHandler?: (state: boolean) => void;
 
-  constructor(private primaryColor: string, private chatHolder: ChatHolder) {
+  constructor(private opts: ChatOptions, private chatHolder: ChatHolder) {
     this.initView();
     this.chatHolder.onCloseChat = this.close;
   }
@@ -43,12 +47,25 @@ class ChatManager {
         id={BubbleButtonId}
       >
         <img
-          class={styles.open}
-          src="//mtbird-cdn.staringos.com/111144171373-1216141-41610-1141410-611010103032357.png"
+          class={`${styles.open} ${
+            this.opts.bubbleOpenImg ? styles.customized : ''
+          }`}
+          src={
+            this.opts.bubbleOpenImg || DefaultBubbleButtonBackgroundImage.Open
+          }
         />
         <img
-          class={styles.close}
-          src="//mtbird-cdn.staringos.com/14100111131010-101025-41521-102214-045113111511016317.png"
+          class={`${styles.close} ${
+            this.opts.bubbleCloseImg || this.opts.bubbleOpenImg
+              ? styles.customized
+              : ''
+          }`}
+          src={
+            this.opts.bubbleOpenImg && !this.opts.bubbleCloseImg
+              ? this.opts.bubbleOpenImg
+              : this.opts.bubbleCloseImg ||
+                DefaultBubbleButtonBackgroundImage.Close
+          }
         />
       </div>
     );
@@ -71,7 +88,7 @@ class ChatManager {
 
   private generateCustomButtonStyle() {
     return {
-      background: this.primaryColor,
+      background: this.opts.primaryColor,
     };
   }
 }

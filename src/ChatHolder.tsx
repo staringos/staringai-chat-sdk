@@ -5,6 +5,7 @@ import h from './utils/runtime';
 import { queryStringify } from './utils';
 import { regenerateToken } from './utils';
 import { checkIfDomExists } from './utils/dom';
+import { StaringChatConfig } from './utils/type';
 
 class ChatHolder {
   private holder: HTMLElement;
@@ -89,7 +90,7 @@ class ChatHolder {
       <div class={styles.powered}>
         Powered by{' '}
         <strong>
-          <a href="#">StaringAI</a>
+          <a href="http://staringos.com/">StaringAI</a>
         </strong>
       </div>
     );

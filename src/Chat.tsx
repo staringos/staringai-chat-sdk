@@ -1,11 +1,7 @@
 import ChatManager from './ChatManager';
 import ChatHolder from './ChatHolder';
 import { DefaultChatOptions } from './utils/constants';
-
-export interface ChatOptions {
-  csid: string;
-  primaryColor?: string;
-}
+import { ChatOptions } from './utils/type';
 
 class Chat {
   private chatManage?: ChatManager;
@@ -24,7 +20,7 @@ class Chat {
     this.chatHolder = new ChatHolder(this.options?.csid);
 
     this.chatManage = new ChatManager(
-      this.options.primaryColor,
+      this.options,
       this.chatHolder
     );
 
