@@ -18,7 +18,7 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "dev": "NODE_ENV=development tsdx watch & parcel example/index.html --open && http-server ./dist"
+    "dev": "NODE_ENV=development tsdx watch & parcel example/index.html --open & http-server ./dist"
   },
   "husky": {
     "hooks": {
